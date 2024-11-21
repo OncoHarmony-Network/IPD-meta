@@ -1,14 +1,41 @@
-# This code is mainly divided into predictive survival analysis and meta analysis
-## 1、Predictive survival analysis
-Summarize individual patient data from 7 clinical study cohorts and divide patients into 4 groups based on whether they have received immunotherapy and whether they have emotional distress: ED/ICI; NED/ICI; ED/CT; NED/CT.
-Calculate the HR, 95% CI, and p values of ICI and CT patients within the two groups based on ED statu; and then calculate these of ED and NED patients within the two groups based on treatment.
-Finally draw a survival curve to observe whether there are differences between the four groups.
+# IPD-meta
 
+Welcome to the IPD-meta project repository. This project encompasses predictive survival analysis and meta-analysis components, designed to provide a comprehensive evaluation of clinical outcomes.
 
-Analyze OS and PFS separately and finally obtain two survival analysis figures.
-## 2、Meta analysis
-For each chosen randomized controlled trials we include, patients who received atezolizumab were assigned into the ICI cohort regardless of whether they had received platinum-based chemotherapy prior to that period,
-patients who did not receive atezolizumab were assigned to the chemotherapy (CT) cohort. 
-For each single-arm trials, divided all individual patients into ICI cohorts. A total of 12 cohorts were obtained.
+## Directory Structure
 
-Based on the HR and 95% CI of each cohort, conduct meta-analysis with treatment methods as subgroups. Analyze OS and PFS separately and finally obtain two forest figures.
+```
+IPD-meta/
+├── code/              # All source code is stored here.
+└── figure/            # Core result figures are stored here.
+```
+
+## 1. Predictive Survival Analysis
+
+This section involves summarizing individual patient data from 7 clinical study cohorts. Patients are categorized into 4 groups based on their receipt of immunotherapy and the presence of emotional distress: ED/ICI, NED/ICI, ED/CT, NED/CT.
+
+- **Objective**: Calculate the Hazard Ratio (HR), 95% Confidence Interval (CI), and p-values for ICI and CT patients within the two emotional distress groups. Additionally, calculate these metrics for ED and NED patients within the two treatment groups.
+- **Output**: Generate survival curves to assess differences between the four groups.
+- **Deliverables**: Two separate survival analysis figures for Overall Survival (OS) and Progression-Free Survival (PFS).
+
+## 2. Meta Analysis
+
+In this section, we focus on selected randomized controlled trials and single-arm trials to categorize patients into ICI and CT cohorts.
+
+- **Randomized Controlled Trials**: Patients receiving atezolizumab are assigned to the ICI cohort, irrespective of prior platinum-based chemotherapy.
+- **Single-Arm Trials**: All individual patients are divided into ICI cohorts, resulting in a total of 12 cohorts.
+- **Objective**: Utilize the HR and 95% CI from each cohort to perform a meta-analysis, with treatment methods as subgroups.
+- **Output**: Conduct separate analyses for OS and PFS, culminating in two forest plot figures.
+
+## LICENSE
+
+Code and documents of this work are made available for non commercial research purposes only under __Apache License v2__ license.
+
+## Contacts
+
+- [Jian-Guo Zhou](https://github.com/JianGuoZhou3)
+
+***
+
+[**OncoHarmony Network**](https://zhoulab.ac.cn/)
+
